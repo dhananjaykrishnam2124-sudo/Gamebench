@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Anu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <div class="animated-bg">
+    <div class="floating-hearts-container" id="hearts-container"></div>
+    <div class="particles-container" id="particles-container"></div>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="music/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 5 6 5c2.1 0 3.4 1.2 4.3 2.6L12 10l1.7-2.4C14.6 6.2 15.9 5 18 5c3.3 0 5.1 3.4 3.6 6.8C19.5 16.4 12 21 12 21z"/></svg>
+      <div class="load-line"><span></span></div>
+      <button id="begin-btn" class="begin-btn" disabled>Preparing something special</button>
+    </div>
+  </div>
+
+  <main class="story-wrapper">
+
+    <section id="scene-ribbon" class="scene hidden">
+      <div class="ribbon-container" id="ribbon">
+        <p class="ribbon-small">For Anu</p>
+        <h1 class="ribbon-text">Happy Birthday, My Love</h1>
+        <span class="rule"></span>
+      </div>
+    </section>
+
+    <section id="scene-cake" class="scene hidden">
+      <div class="cake-container">
+        <div class="candles-wrapper">
+          <div class="candle-digit">
+            <div class="flame" id="flame-1"></div>
+            <div class="smoke-effect" id="smoke-1"></div>
+            <span class="number-candle">1</span>
+          </div>
+          <div class="candle-digit">
+            <div class="flame" id="flame-2"></div>
+            <div class="smoke-effect" id="smoke-2"></div>
+            <span class="number-candle">9</span>
+          </div>
+        </div>
+
+        <div class="cake">
+          <div class="layer layer-top"></div>
+          <div class="layer layer-middle"></div>
+          <div class="layer layer-bottom"></div>
+        </div>
+        <div class="plate"></div>
+
+        <div class="cake-text">
+          <h2 class="glow-text">Make a wish</h2>
+          <p class="tap-subtext">Tap to blow out the candles</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="scene-letter" class="scene hidden">
+      <div class="envelope-wrapper" id="envelope-wrapper" role="button" tabindex="0" aria-label="Open the letter">
+        <div class="envelope" id="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-pocket"></div>
+          <div class="heart-seal" id="heart-seal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 5 6 5c2.1 0 3.4 1.2 4.3 2.6L12 10l1.7-2.4C14.6 6.2 15.9 5 18 5c3.3 0 5.1 3.4 3.6 6.8C19.5 16.4 12 21 12 21z"/></svg>
+          </div>
+          <p class="envelope-title">To my love</p>
+        </div>
+        <p class="tap-subtext">Tap to open</p>
+      </div>
+
+      <div class="letter-paper hidden" id="letter-paper">
+        <div class="letter-content">
+          <p class="handwritten-text">
+            My dearest Anu,
+            <br><br>
+            Happy Birthday, my love.
+            <br><br>
+            Finally, a personal new year for you. I hope you achieve great things in the year ahead. Your journey may not be easy; it may be filled with problems and sorrows, but I wish you will keep moving forward without giving up. I know you have the potential. Just remember that if you ever need help, don't hesitate to come to me. I would love to be your greatest supporter. I wish that every second you live is beautiful. I love you, and I will always be with you.
+            <br><br>
+            With love,
+            <br>
+            <span class="sign">Dhananjay</span>
+          </p>
+        </div>
+
+        <button id="continue-btn" class="continue-btn">
+          <span>Continue</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="scene-surprise" class="scene hidden">
+      <div class="surprise-container">
+        <h2 class="surprise-title">A surprise for you</h2>
+        <div class="surprise-message-box">
+          <p class="animated-gift-text">Check your bag to find your gift</p>
+        </div>
+        <div class="parchment-note">
+          <p class="handwritten-text">
+            Hey babe, I know I've already gave you your B'Day gift, but that wasn't enough for me. So I think of giving you this. Hope you like it. This is all I've for you. Enjoy your favorite Song. And let you know, I LOVE YOU & ALWAYS YOU.
+           </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
